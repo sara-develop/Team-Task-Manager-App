@@ -1,0 +1,62 @@
+.users-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* מרכז את כל התוכן אופקית */
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.users-title {
+  color: #542468;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  text-align: center; /* מרכז את הכותרת */
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.user-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-left: 5px solid #542468;
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* מרכז תוכן בתוך הכרטיס */
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.user-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.user-card strong {
+  font-size: 1.1rem;
+  color: #542468;
+  margin-bottom: 4px;
+}
+
+.user-email {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.no-users, .loading {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+}

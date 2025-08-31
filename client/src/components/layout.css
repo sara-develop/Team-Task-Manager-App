@@ -1,0 +1,18 @@
+
+/* עיצוב צבע סגול לפריט פעיל ב-TabMenu */
+.custom-tabmenu .p-tabmenuitem.p-highlight .p-menuitem-link {
+    border-bottom: 2px solid #542468 !important;
+    color: #542468 !important;
+    font-weight: bold;
+}
+
+/* עיצוב כללי ללינקים שלא נבחרו */
+.custom-tabmenu .p-tabmenuitem .p-menuitem-link {
+    color: #58585a;
+}
+
+/* צבע הטאב הפעיל ב-TabMenu */
+.p-tabmenu .p-tabmenu-nav .p-highlight a {
+    color: #542468 !important;       /* טקסט סגול */
+    border-bottom-color: #542468 !important; /* קו תחתון סגול */
+}

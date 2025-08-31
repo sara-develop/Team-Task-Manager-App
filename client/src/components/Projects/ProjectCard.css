@@ -1,0 +1,133 @@
+.tasks-section input,
+.tasks-section select {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tasks-section input:focus,
+.tasks-section select:focus {
+  border-color: #542468;
+  box-shadow: 0 0 4px rgba(84, 36, 104, 0.4);
+  outline: none;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, z-index 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.project-card.expanded {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.task-card {
+  min-height: 80px;
+  width: 100%;
+}
+
+.project-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  background: #fff;
+  /* בהיר יותר ונקי */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* מרכז תוכן בכרטיס */
+  width: 320px;
+  /* רוחב אחיד */
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* כך שהכותרת והחץ ימוקמו בקצה */
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #542468;
+  margin-bottom: 12px;
+}
+
+.arrow {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-left: 2px solid #542468;
+  border-bottom: 2px solid #542468;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow.expanded {
+  transform: rotate(135deg);
+}
+
+.project-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* מרכז את התוכן הפנימי */
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.tasks-section {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* מרכז את המשימות והטפסים */
+}
+
+.tasks-section h4 {
+  margin-bottom: 12px;
+  color: #542468;
+  text-align: center;
+}
+
+.tasks-section p {
+  color: #555;
+  text-align: center;
+}
+
+.tasks-section form {
+  width: 100%;
+  /* מאפשר לטופס להתרחב לרוחב הכרטיס */
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+  }
+}

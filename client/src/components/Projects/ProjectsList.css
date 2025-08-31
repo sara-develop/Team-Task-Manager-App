@@ -1,0 +1,64 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* מרכז את כל התוכן אופקית */
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.projects-title {
+  color: #542468;
+  margin-bottom: 32px;
+  font-size: 2.2rem;
+  text-align: center; /* מרכז את הכותרת */
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* מרכז את הכרטיסים בשורה */
+}
+
+.no-projects, .loading {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* כרטיסים עצמם */
+.project-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* מרכז תוכן בתוך הכרטיס */
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+/* אפשרות לכותרת ופרטים בכרטיס */
+.project-card strong {
+  font-size: 1.1rem;
+  color: #542468;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.project-card p {
+  color: #555;
+  margin: 4px 0;
+  font-size: 0.95rem;
+}

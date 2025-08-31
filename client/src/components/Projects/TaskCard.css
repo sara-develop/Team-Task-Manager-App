@@ -1,0 +1,167 @@
+.task-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.task-card-header strong {
+  color: #542468;
+  font-size: 1.1rem;
+}
+
+.arrow {
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #542468;
+  border-bottom: 2px solid #542468;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow.expanded {
+  transform: rotate(135deg);
+}
+
+.task-card-body {
+  margin-top: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-field label {
+  font-weight: 600;
+  color: #542468;
+  margin-bottom: 4px;
+}
+
+.task-field input,
+.task-field select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-field input:focus,
+.task-field select:focus {
+  border-color: #542468;
+  box-shadow: 0 0 0 2px rgba(84,36,104,0.2);
+  outline: none;
+}
+
+.task-card-body > div > button {
+  cursor: pointer;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #542468;
+  color: white;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.task-card-body > div > button:hover:not(:disabled) {
+  background: #3f1e5a;
+}
+
+.task-card-body > div > button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comments-section {
+  margin-top: 14px;
+  background: #f9f6fb;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comments-section h4 {
+  margin: 0 0 6px 0;
+  color: #542468;
+  font-size: 1rem;
+}
+
+.comment {
+  background: #fff;
+  border-radius: 6px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.comment p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.comment button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.comment button:hover {
+  background: #c0392b;
+}
+
+.add-comment {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.add-comment input {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.add-comment button {
+  background: #542468;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 6px 10px;
+  font-weight: 500;
+}

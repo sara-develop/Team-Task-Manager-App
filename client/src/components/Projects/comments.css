@@ -1,0 +1,46 @@
+/* client/src/components/comments.css */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.modal {
+  background: #fff;
+  width: 640px;
+  max-width: 95%;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+.modal-header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+.modal-body { margin-top: 8px; max-height: 60vh; overflow: auto; }
+
+.comment-input textarea {
+  width: 100%;
+  min-height: 84px;
+  resize: vertical;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.comments-list { list-style: none; padding: 0; margin-top: 12px; }
+.comments-list li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+.comment-meta { font-size: 0.85rem; color: #666; margin-bottom: 4px; }
+.comment-text { font-size: 0.95rem; color: #333; }
+.btn-close {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
